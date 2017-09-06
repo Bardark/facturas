@@ -1,0 +1,61 @@
+.Estilo1 {
+  font-weight: bold;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+
+  padding : 2em;
+  margin  : 0;
+}
+
+form {
+  position: relative;
+
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+
+  background: #FFF;
+}
+
+.span {
+  background: #0ca0d8;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:hover {
+  background-color:#D7D7FF;
+}
+
+input[type=text] {
+
+  -webkit-appearance: none;
+
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input {
+  radius: 0;
+  text-transform:uppercase;
+}
+
+#enviar:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+
+input, textarea, select, button, label {
+  width : 150px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
