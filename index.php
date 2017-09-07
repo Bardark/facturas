@@ -17,20 +17,12 @@
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <script Language=Javascript src="js/jquery-1.12.4.js"></script>
 		<script Language=Javascript src="js/jquery-ui.js"></script>
+    <script Language=Javascript src="js/jquery.maskedinput.js"></script>
     <script>
 		$( function() {
 			$( "#datepicker" ).datepicker();
 		} );
-		</script>
-
-    <!-- ALERT
-    <script language="JavaScript">
-      function prueba(){
-          if (confirm('¿Estas seguro de enviar este formulario?')){
-             javascript:history.go(-1);
-          }
-      }
-    </script> -->
+  </script>
   </head>
 
   <body>
@@ -42,35 +34,33 @@
           </div>
           <div class="col-md-6">
             <label for="">Número de cliente</label>
-            <input name="numCliente" type="text" id="numCliente" />
+            <input name="numCliente" type="text" id="numCliente" required />
           </div>
           <div class="col-md-6">
             <label for="">Nombre de cliente</label>
-            <input name="nomCliente" type="text" id="nomCliente" />
+            <input name="nomCliente" type="text" id="nomCliente" required />
           </div>
           <div class="col-md-6">
             <label for="">Factura</label>
-            <input name="nombreFac" type="text" id="nombreFac" />
+            <input name="nombreFac" type="text" id="nombreFac" required />
           </div>
           <div class="col-md-6">
             <label for="">Monto antes de IVA</label>
-            <input name="importe" type="text" id="importe" />
+            <input name="importe" type="text" id="importe" required />
           </div>
           <div class="col-md-6">
             <label for="">Monto total</label>
-            <input name="importeTotal" type="text" id="importeTotal" />
+            <input name="importeTotal" type="text" id="importeTotal" required />
           </div>
           <div class="col-md-6">
             <label for="">Fecha</label>
-            <input name="datepicker" type="text" id="datepicker" />
+            <input name="datepicker" type="text" id="datepicker" required />
           </div>
           <div class="col-md-12">
-            <input id="enviar" type="submit" name="enviar" value="enviar" class="fa fa-paper-plane btn-primary">
+            <input id="enviar" type="submit" name="enviar" value="enviar">
           </div>
         </form>
       </div>
     </div>
-    <!-- Bootstrsp JS
-    <script src="bootstrap/js/bootstrap.min.js"></script-->
   </body>
 </html>

@@ -6,36 +6,27 @@
 
 <?php
 // Recibimos por POST los datos procedentes del formulario
-$numCliente = utf8_decode($_POST["numCliente"]);
-$nomCliente = utf8_decode($_POST["nomCliente"]);
-$nombreFac = utf8_decode($_POST["nombreFac"]);
-$importe = utf8_decode($_POST["importe"]);
-$importeTotal = utf8_decode($_POST["importeTotal"]);
-$datepicker = utf8_decode($_POST["datepicker"]);
-
-  //Verificamos que ningun campo vaya vacio
-	if(isset($_POST['numCliente']) && !empty($_POST['numCliente']) &&
-	isset($_POST['nomCliente']) && !empty($_POST['nomCliente'])&&
-	isset($_POST['nombreFac']) && !empty($_POST['nombreFac']) &&
-	isset($_POST['importe']) && !empty($_POST['importe']) &&
-	isset($_POST['importeTotal']) && !empty($_POST['importeTotal'])&&
-	isset($_POST['datepicker']) && !empty($_POST['datepicker'])) {
+$numCliente = ($_POST["numCliente"]);
+$nomCliente = ($_POST["nomCliente"]);
+$nombreFac = ($_POST["nombreFac"]);
+$importe = ($_POST["importe"]);
+$importeTotal = ($_POST["importeTotal"]);
+$datepicker = ($_POST["datepicker"]);
 
 		// Abrimos la conexion a la base de datos
-		mysql_connect("localhost","root","");
+		$link = mysql_connect("localhost","root","");
 		mysql_select_db("facturas") OR DIE ("Error: No es posible establecer la conexión");
-		mysql_query("INSERT INTO registro_fac (numCliente, nomCliente, nombreFactura, importeSinIVA, importeTotal, fechaPago,) VALUES ('$numCliente','$nomCliente','$nombreFac','$importe','$importeTotal','$datepicker')");
+		$tildes = $link->query("SET NAMES 'utf8'");
+		mysql_query($link, "INSERT INTO registro_fac (numCliente, nomCliente, nomFactura, importeSinIVA, importeTotal, fechaPago,) VALUES ('$numCliente', '$nomCliente', '$nombreFac', '$importe', '$importeTotal', '$datepicker')");
+		//mysql_query('INSERT INTO registro_fac (numCliente, nomCliente, nombreFactura, importeSinIVA, importeTotal, fechaPago,) VALUES ("'.$numCliente'", "'.$nomCliente'", "'.$nombreFac'", "'.$importe'", "'.$importeTotal'", "'.$datepicker'")');
 
 		// Confirmamos que el registro ha sido insertado con exito
-		echo "<script>
+		/*echo "<script>
 	       alert('Los datos han sido guardados con exito');
-		     window.location = 'javascript:history.go(-1)';
-				 </script>";
-	 } else {
-
- 			echo "<script>
-		       alert('Error, no ha introducido todos los datos');
-			     window.location = 'javascript:history.go(-1)';
-					 </script>";
- 	}
+		     location.href='../index.php'
+				 </script>";*/
+				 echo "
+		 					<p>Los datos han sido guardados con exito.</p>
+		 					<p><a href='../index.php'>VOLVER ATRÁS</a></p>
+		 		";
 ?>
