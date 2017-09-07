@@ -23,6 +23,7 @@ form {
   background: #0ca0d8;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
 }
 
 input:hover {
@@ -42,21 +43,45 @@ input[type=text] {
   box-sizing: border-box;
 }
 
+input[type=date] {
+
+  -webkit-appearance: none;
+
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 input {
   radius: 0;
-  /*text-transform:uppercase;   Línea pra escribir solo con mayúsculas*/
 }
 
 #enviar:hover{
     color: #1883ba;
     background-color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
 
-input, textarea, select, button, label, input[type=number] {
+input, textarea, select, button, label {
   width : 150px;
   margin: 0;
 
   -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
      -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
           box-sizing: border-box;
+}
+
+#divenviar {
+  text-align: center;
+}
+
+#formGen {
+  background:url('../img/formularios.jpg') bottom right no-repeat;
 }
