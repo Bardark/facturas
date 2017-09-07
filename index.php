@@ -43,7 +43,7 @@
           </div>
           <div class="col-md-6">
             <label for="">Fecha</label>
-            <input name="fechaPago" type="date" id="fechaPago" required />
+            <input name="fechaPago" type="date" id="fechaPago" required placeholder="dd/mm/aaaa" />
           </div>
           <div class="col-md-12" id="divenviar">
             <input id="enviar" type="submit" class="btn-primary" name="enviar" value="Enviar">

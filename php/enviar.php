@@ -8,8 +8,7 @@ $importeTotal = ($_POST["importeTotal"]);
 $fechaPago = ($_POST["fechaPago"]);
 
 		// Abrimos la conexion a la base de datos
-		mysql_connect("localhost","root","");
-		mysql_select_db("facturas") OR DIE ("Error: No es posible establecer la conexión");
+		include 'conexion.php';
 		mysql_query("INSERT INTO registro_fac (numCliente, nomCliente, nomFactura, importeSinIVA, importeTotal, fechaPago) VALUES ('$numCliente', '$nomCliente', '$nombreFac', '$importe', '$importeTotal', '$fechaPago')");
 
 		// Confirmamos que el registro ha sido insertado con exito
