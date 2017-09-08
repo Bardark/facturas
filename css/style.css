@@ -1,6 +1,12 @@
 .Estilo1 {
   font-weight: bold;
 }
+
+.Estilo2 {
+  font-weight: bold;
+  text-align: center;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8em;

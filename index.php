@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <?php include "navbar.php"; ?>
     <div class="container-fluid">
       <div class="Estilo1 row">
         <form role="form" name="form" method="post" action="php/enviar.php" enctype="multipart/form-data" id="formGen">
