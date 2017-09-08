@@ -6,6 +6,7 @@
     <meta name="utf8" content="">
     <title>Formulario de Registro</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
@@ -43,13 +44,13 @@
           <div class="col-md-6">
             <label for="">Monto antes de IVA</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
-              <input name="importe" type="text" id="importe" required placeholder="123456.99" />
+              <input name="importe" type="text" id="importe" required placeholder="$123456.99" />
           </span>
           </div>
           <div class="col-md-6">
             <label for="">Monto total</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
-              <input name="importeTotal" type="text" id="importeTotal" required placeholder="123456.99" />
+              <input name="importeTotal" type="text" id="importeTotal" required placeholder="$123456.99" />
           </span>
           </div>
           <div class="col-md-6">

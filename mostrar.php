@@ -23,12 +23,12 @@
     <title></title>
 
   </head>
-  <body>
+  <body style="background-color:#000000;">
     <?php include "secciones/menu.php"; ?>
     <div class="container-fluid">
       <div class="Estilo2 row">
         <div class="col-md-12">
-          <table id="tblMostrar" class="table table-striped Estilo2">
+          <table id="tblMostrar" class="table table-striped Estilo2" style="background-color:#fff;">
       		    <thead>
       		        <tr>
       			           <th>ID</th>
