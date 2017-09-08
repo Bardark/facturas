@@ -7,7 +7,7 @@
   $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 ?>
 <!DOCTYPE html>
-<html>
+<html xml:lang="es" lang="es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -24,11 +24,11 @@
 
   </head>
   <body>
-    <button id="btnMostrar" type="submit" name="btnMostrar">Mostrar</button>
+    <?php include "secciones/menu.php"; ?>
     <div class="container-fluid">
-      <div class="Estilo2 row hidden" id="tblMostrar">
+      <div class="Estilo2 row">
         <div class="col-md-12">
-          <table class="table table-striped Estilo2">
+          <table id="tblMostrar" class="table table-striped Estilo2">
       		    <thead>
       		        <tr>
       			           <th>ID</th>
@@ -57,7 +57,5 @@
         </div>
       </div>
     </div>
-    <!-- Llamar js -->
-    <script src="js/mostrar.js"></script>
   </body>
 </html>

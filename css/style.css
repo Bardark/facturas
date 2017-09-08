@@ -13,16 +13,15 @@ body {
 
   padding : 2em;
   margin  : 0;
+  background: #000;
 }
 
 form {
   position: relative;
 
   width  : 740px;
-  height : 498px;
+  height : auto;
   margin : 0 auto;
-
-  background: #FFF;
 }
 
 .span {

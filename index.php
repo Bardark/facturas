@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xml:lang="es" lang="es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,9 +14,9 @@
     <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
   </head>
 
-  <body>
-    <?php include "navbar.php"; ?>
-    <div class="container-fluid">
+  <body style="background-color:#000000;">
+    <?php include "secciones/menu.php"; ?>
+    <div class="container-fluid" style="background-color:#FFF;">
       <div class="Estilo1 row">
         <form role="form" name="form" method="post" action="php/enviar.php" enctype="multipart/form-data" id="formGen">
           <div class="col-md-12 span">
@@ -24,31 +24,43 @@
           </div>
           <div class="col-md-6">
             <label for="">Número de cliente</label>
-            <input name="numCliente" type="text" id="numCliente" required placeholder="000001" autofocus="" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-hashtag"></i>
+              <input name="numCliente" type="text" id="numCliente" required placeholder="000001" autofocus="" />
+            </span>
           </div>
           <div class="col-md-6">
             <label for="">Nombre de cliente</label>
-            <input name="nomCliente" type="text" id="nomCliente" required placeholder="Juan Peréz" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-user"></i>
+              <input name="nomCliente" type="text" id="nomCliente" required placeholder="Juan Peréz" />
+            </span>
           </div>
           <div class="col-md-6">
             <label for="">Factura</label>
-            <input name="nombreFac" type="text" id="nombreFac" required placeholder="Nombre de la factura" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-file"></i>
+              <input name="nombreFac" type="text" id="nombreFac" required placeholder="Nombre de la factura" />
+          </span>
           </div>
           <div class="col-md-6">
             <label for="">Monto antes de IVA</label>
-            <input name="importe" type="text" id="importe" required placeholder="$123456.99" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
+              <input name="importe" type="text" id="importe" required placeholder="123456.99" />
+          </span>
           </div>
           <div class="col-md-6">
             <label for="">Monto total</label>
-            <input name="importeTotal" type="text" id="importeTotal" required placeholder="$123456.99" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
+              <input name="importeTotal" type="text" id="importeTotal" required placeholder="123456.99" />
+          </span>
           </div>
           <div class="col-md-6">
             <label for="">Fecha</label>
-            <input name="fechaPago" type="date" id="fechaPago" required placeholder="dd/mm/aaaa" />
+            <span class="input-group-addon glyphicon"><i class="fa fa-calendar"></i>
+              <input name="fechaPago" type="date" id="fechaPago" required placeholder="aaaa/mm/dd" />
+          </span>
           </div>
           <div class="col-md-12" id="divenviar">
             <input id="enviar" type="submit" class="btn-primary" name="enviar" value="Enviar">
-          </div>
+          </div><br>
         </form>
       </div>
     </div>
