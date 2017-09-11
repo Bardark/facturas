@@ -39,25 +39,25 @@
             <label for="">Factura</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-file"></i>
               <input name="nombreFac" type="text" id="nombreFac" required placeholder="Nombre de la factura" />
-          </span>
+            </span>
           </div>
           <div class="col-md-6">
             <label for="">Monto antes de IVA</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
               <input name="importe" type="text" id="importe" required placeholder="$123456.99" />
-          </span>
+            </span>
           </div>
           <div class="col-md-6">
             <label for="">Monto total</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-usd"></i>
               <input name="importeTotal" type="text" id="importeTotal" required placeholder="$123456.99" />
-          </span>
+            </span>
           </div>
           <div class="col-md-6">
             <label for="">Fecha</label>
             <span class="input-group-addon glyphicon"><i class="fa fa-calendar"></i>
               <input name="fechaPago" type="date" id="fechaPago" required placeholder="aaaa/mm/dd" />
-          </span>
+            </span>
           </div>
           <div class="col-md-12" id="divenviar">
             <input id="enviar" type="submit" class="btn-primary" name="enviar" value="Enviar">

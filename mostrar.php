@@ -1,10 +1,6 @@
 <?php
   // Conectando, seleccionando la base de datos
-  include 'php/conexion.php';
-
-  // Realizar una consulta MySQL
-  $query = 'SELECT * FROM registro_fac';
-  $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+  include 'php/mostrar.php';
 ?>
 <!DOCTYPE html>
 <html xml:lang="es" lang="es">
@@ -38,6 +34,7 @@
                        <th>Importe sin IVA</th>
                        <th>Importe total</th>
                        <th>Fecha de pago</th>
+                       <!--<th>Estado</th>-->
       		        </tr>
       		    </thead>
               <?php while ($row = mysql_fetch_array($result)){ // aca puedes hacer la consulta e iterarla con each. ?>
@@ -50,9 +47,6 @@
                   <td><?php echo $row['importeTotal'] ?></td>
                   <td><?php echo $row['fechaPago'] ?></td>
                 </tr>
-              <?php
-      	       }
-              ?>
           </table>
         </div>
       </div>
