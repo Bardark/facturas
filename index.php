@@ -58,7 +58,7 @@
             <span class="input-group-addon glyphicon"><i class="fa fa-calendar"></i>
               <input name="fechaPago" type="date" id="fechaPago" required placeholder="aaaa/mm/dd" />
             </span>
-          </div>
+          </div><br>
           <div class="col-md-12" id="divenviar">
             <input id="enviar" type="submit" class="btn-primary" name="enviar" value="Enviar">
           </div><br>

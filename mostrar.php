@@ -27,14 +27,14 @@
           <table id="tblMostrar" class="table table-striped Estilo2" style="background-color:#fff;">
       		    <thead>
       		        <tr>
-      			           <th>ID</th>
-      			           <th>Número cliente</th>
-      			           <th>Nombre cliente</th>
-                       <th>Nombre factura</th>
-                       <th>Importe sin IVA</th>
-                       <th>Importe total</th>
-                       <th>Fecha de pago</th>
-                       <!--<th>Estado</th>-->
+  			           <th>ID</th>
+  			           <th>Número cliente</th>
+  			           <th>Nombre cliente</th>
+                   <th>Nombre factura</th>
+                   <th>Importe sin IVA</th>
+                   <th>Importe total</th>
+                   <th>Fecha de pago</th>
+                   <!--<th>Estado</th>-->
       		        </tr>
       		    </thead>
               <?php while ($row = mysql_fetch_array($result)){ // aca puedes hacer la consulta e iterarla con each. ?>
@@ -47,6 +47,8 @@
                   <td><?php echo $row['importeTotal'] ?></td>
                   <td><?php echo $row['fechaPago'] ?></td>
                 </tr>
+              <?php }
+              ?>
           </table>
         </div>
       </div>
