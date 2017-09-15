@@ -1,4 +1,4 @@
-<center><h1>Página de agregar contacto</h1></center>
+<center><h1>Página de agregar facturas</h1></center>
 <br>
 <div class="container">
   <?php echo form_open(base_url() . 'facturas/agregarFactura'); ?>
