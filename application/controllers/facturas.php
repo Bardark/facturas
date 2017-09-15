@@ -63,8 +63,6 @@
 
         redirect(base_url() . 'facturas/');
       }
-
-
     }
   }
 
