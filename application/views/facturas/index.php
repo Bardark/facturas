@@ -1,7 +1,13 @@
 <center><h1>Página principal del registro de facturas</h1></center>
 <div class="container">
+  <?php echo open(base_url() . 'reporte/index'); ?>
   <div class="row">
     <div class="col-md-12">
+      <button type="submit" class="btn btn-success">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i>
+        <span class="glyphicons glyphicons-floppy-disk"></span>
+        Generar Reportes
+      </button>
        <table class="table table-striped Estilo2" style="">
            <thead>
                <tr>

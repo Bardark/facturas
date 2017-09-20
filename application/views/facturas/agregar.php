@@ -72,7 +72,8 @@
     <div class="col-md-12">
       <center>
         <button type="submit" class="btn btn-success">
-          <span class="glyphicon glyphicon-floppy-disk"></span>
+          <i class="fa fa-floppy-o" aria-hidden="true"></i>
+          <span class="glyphicons glyphicons-floppy-disk"></span>
           Guardar
         </button>
       </center>
