@@ -50,17 +50,17 @@ class Reporte extends CI_Controller {
     // La variable $x se utiliza para mostrar un número consecutivo
     $x = 1;
     //foreach ($alumnos as $alumno) {
-    foreach ($registro as $row){ // aca puedes hacer la consulta e iterarla con each
+    foreach ($registro as $registros){ // aca puedes hacer la consulta e iterarla con each
       // se imprime el numero actual y despues se incrementa el valor de $x en uno
       $this->pdf->Cell(15,6,$x++,'BL',0,'C',0);
       // Se imprimen los datos de cada alumno
       //echo $row -> idFac</td>-->
-      /*$this->pdf->Cell(25,6,$registro->numCliente,'B',0,'C',0);
-      $this->pdf->Cell(25,6,$registro->nomCliente,'B',0,'L',0);
-      $this->pdf->Cell(25,6,$registro->nomFac,'B',0,'L',0);
-      $this->pdf->Cell(25,6,$registro->importeSinIVA,'B',0,'L',0);
-      $this->pdf->Cell(25,6,$registro->importeTotal,'B',0,'L',0);
-      $this->pdf->Cell(25,6,$registro->fechaPago,'B',0,'L',0);*/
+      $this->pdf->Cell(25,6,$registros->numCliente,'B',0,'C',0);
+      $this->pdf->Cell(25,6,$registros->nomCliente,'B',0,'L',0);
+      $this->pdf->Cell(25,6,$registros->nomFac,'B',0,'L',0);
+      $this->pdf->Cell(25,6,$registros->importeSinIVA,'B',0,'L',0);
+      $this->pdf->Cell(25,6,$registros->importeTotal,'B',0,'L',0);
+      $this->pdf->Cell(25,6,$registros->fechaPago,'B',0,'L',0);
 
       //Se agrega un salto de linea
       $this->pdf->Ln(6);
@@ -74,6 +74,6 @@ class Reporte extends CI_Controller {
      * D = Envia el pdf para descarga
      *
      */
-    $this->pdf->Output("Reporte_Facturas.pdf", 'I');
+    //$this->pdf->Output("Reporte_Facturas.pdf", 'I');
   }
 }

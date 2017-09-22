@@ -1,6 +1,6 @@
 <center><h1>Página principal del registro de facturas</h1></center>
 <div class="container">
-  <?php echo open(base_url() . 'reporte/index'); ?>
+  <?php echo form_open(base_url() . 'reporte/index'); ?>
   <div class="row">
     <div class="col-md-12">
       <button type="submit" class="btn btn-success">
