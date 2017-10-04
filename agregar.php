@@ -4,6 +4,9 @@
     include 'plantilla/header.php';
   ?>
   <body>
+    <?php
+      include 'plantilla/menu.php';
+    ?>
     <center><h1>Página de agregar facturas</h1></center>
     <br>
     <div class="container">

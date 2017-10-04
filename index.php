@@ -5,25 +5,9 @@
   include 'php/mostrar.php';
 ?>
 <body>
-  <!-- Static navbar -->
-  <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand">Registro de facturas</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.php">Facturas</a></li>
-          <li><a href="agregar.php">Agregar</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+  <?php
+    include 'plantilla/menu.php';
+  ?>
   <hr>
   <center><h1>Página principal del registro de facturas</h1></center>
   <div class="container">
@@ -66,7 +50,7 @@
   <hr>
   <center>&copy 2015 - Todos los derechos reservados</center>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-1.12.4.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
 </body>

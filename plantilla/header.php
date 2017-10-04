@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font-Awesome -->
-    <link type="text/css" rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
-    <link type="text/css" rel="stylesheet" href="../font-awesome/css/font-awesome.css"/>
+    <!--Font-Awesome-->
+    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
   </head>
