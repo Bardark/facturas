@@ -9,7 +9,8 @@ $fechaPago = ($_POST["txtFechaP"]);
 
 		// Abrimos la conexion a la base de datos
 		include 'conexion.php';
-		mysql_query("INSERT INTO registro (numCliente, nomCliente, nomFac, importeSinIVA, importeTotal, fechaPago) VALUES ('$numCliente', '$nomCliente', '$nombreFac', '$importe', '$importeTotal', '$fechaPago')");
+		mysql_query("INSERT INTO registro (numCliente, nomCliente, nomFac, importeSinIVA, importeTotal, fechaPago)
+								VALUES ('$numCliente', '$nomCliente', '$nombreFac', '$importe', '$importeTotal', '$fechaPago')");
 
 		// Confirmamos que el registro ha sido insertado con exito
 		echo "<script>
