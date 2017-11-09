@@ -5,11 +5,13 @@ var btnGuardar=$('#btnGuardar'),
     txtImporte=$('#txtImporte'),
     txtImporteT=$('#txtImporteT'),
     txtFechaP=$('#txtFechaP'),
+    txtEstado=$('#txtEstado'),
     tbodyResult=$('#tbodyResult');
 
 var dvAgregar=$('#dvAgregar'),
     dvEditar=$('#dvEditar'),
-    dvListado=$('#dvListado');
+    dvListado=$('#dvListado'),
+    dvMarcar=$('#dvMarcar');
 
 var txtNumCE=$('#txtNumCE'),
     txtNomCE=$('#txtNomCE'),
@@ -20,6 +22,22 @@ var txtNumCE=$('#txtNumCE'),
     btnGuardarE=$('#btnGuardarE'),
     btnCancelarE=$('#btnCancelarE'),
     txtIdE=$('#txtIdE');
+
+function index() {
+  dvAgregar.addClass('hidden');
+  dvListado.removeClass('hidden');
+  dvEditar.addClass('hidden');
+  dvMarcar.addClass('hidden');
+  dvListadoEstatus.addClass('hidden');
+}
+
+function agregar() {
+  dvAgregar.removeClass('hidden');
+  dvListado.addClass('hidden');
+  dvEditar.addClass('hidden');
+  dvMarcar.addClass('hidden');
+  dvListadoEstatus.addClass('hidden');
+}
 
 function crearPdf() {
   window.location.href = "pdf.php";
@@ -39,6 +57,7 @@ function agregarFactura(){
      Importe:     txtImporte.val(),
      ImporteT:     txtImporteT.val(),
      FechaP:     txtFechaP.val(),
+     Estado:     txtEstado.val(),
   },
   type: 'post',
   dataType:'json',
@@ -75,11 +94,11 @@ function agregarFactura(){
   .fail(function( jqXHR, textStatus, errorThrown ){
       alert('Ocurrio un error, intente de nuevo '+textStatus);
   });
-
-
 }
 
 function getFacturas(){
+  dvListado.removeClass('hidden');
+  dvAgregar.addClass('hidden');
   var datos = $.ajax({
     url: 'php/facturasGetTodas.php',
     type: 'post',
@@ -101,10 +120,13 @@ function getFacturas(){
                 '<td class="text-center">$'+o.importeTotal+'</td>'+
                 '<td class="text-center">'+o.fechaPago+'</td>'+
                 '<td class="text-center">'+
-                  '<i class="fa fa-trash text-danger" aria-hidden="true" id="'+o.idFac+'" style="cursor:pointer"  ></i>'+
+                  '<i class="fa fa-trash text-danger fa-lg" aria-hidden="true" id="'+o.idFac+'" style="cursor:pointer"  ></i>'+
                 '</td>'+
                 '<td class="text-center">'+
-                  '<i class="fa fa-pencil-square text-primary" aria-hidden="true" id="'+o.idFac+'" style="cursor:pointer"  ></i>'+
+                  '<i class="fa fa-pencil text-primary fa-lg" aria-hidden="true" id="'+o.idFac+'" style="cursor:pointer"  ></i>'+
+                '</td>'+
+                '<td class="text-center">'+
+                  '<i class="fa fa-pencil-square-o text-success fa-lg" aria-hidden="true" id="'+o.idFac+'" style="cursor:pointer"  ></i>'+
                 '</td>'+
               '</tr>'
           );
@@ -235,6 +257,7 @@ function visualizarEdicion(){
   dvAgregar.addClass('hidden');
   dvListado.addClass('hidden');
   dvEditar.removeClass('hidden');
+  dvMarcar.addClass('hidden');
 
   var id = $(this).attr('id');
 
@@ -305,7 +328,7 @@ function editarFactura() {
       else{
         mensaje = res.message;
         swal({
-          title: "Error al editar marca de motor.",
+          title: "Error al editar factura.",
           text: mensaje,
           type: "error",
           showConfirmButton: true
@@ -317,18 +340,17 @@ function editarFactura() {
     .fail(function( jqXHR, textStatus, errorThrown ){
         alert('Ocurrio un error, intente de nuevo '+textStatus);
     });
-
 }
 
 function cancelarEdicion(){
   dvAgregar.addClass('hidden');
   dvListado.removeClass('hidden');
   dvEditar.addClass('hidden');
+  dvMarcar.addClass('hidden');
 }
-
 
 btnGuardar.on('click',agregarFactura);
 tbodyResult.delegate('.fa-trash', 'click', eliminarFactura);
-tbodyResult.delegate('.fa-pencil-square', 'click', visualizarEdicion);
+tbodyResult.delegate('.fa-pencil', 'click', visualizarEdicion);
 btnCancelarE.on('click',cancelarEdicion);
 btnGuardarE.on('click',editarFactura);
